@@ -1,0 +1,10 @@
+name: apptxpt
+title:
+username:
+account: bioestatisticas
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 308954
+bundleId: 3721999
+url: https://bioestatisticas.shinyapps.io/apptxpt/
+when: 1602272381.57915

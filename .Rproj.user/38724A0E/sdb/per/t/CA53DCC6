@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(shiny)\n\nshinyUI(fluidPage(\n  # Application title\n  titlePanel(a(href=\"http://bioestatisticas.wixsite.com/bioestatisticas\", \n               img(src='ob.jpg', align = \"left\",height=60,width=150))),\n  br(\"\"),\n  hr(),\n  h2(\"Transplante Renal\"),\n  \n  \n  sidebarLayout(\n    \n    # Sidebar to demonstrate various slider options ----\n    sidebarPanel(\n      # Escolher o intervalo de anos\n      sliderInput(\"ano\", \"Seleccione intervalo:\",\n                  min = 2003, max = 2016, step = 1, sep = \"\",\n                  value = c(2003,2016)),\n      \n      radioButtons('tipo', 'Seleccione tipo de gráfico:', c('linhas', 'barras'),\n                   inline = TRUE),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h4(\"Selecione indicadores\"),\n      \n      selectInput('y1', 'Indicador 1:', names(dados)[-1], \n                  c(\"DCpmh\",\"TxDCpmh\",\"TxDVpmh\",\"Tx_total_pmh\")[2]),\n      selectInput('y2', 'Indicador 2:', names(dados)[-1], \n                  c(\"DCpmh\",\"TxDCpmh\",\"TxDVpmh\",\"Tx_total_pmh\")[3]),\n      \n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h6(\".\"),\n      h4(\"Escolha o ano ou faça 'play':\"),\n      \n      sliderInput(\"num\", \"\",\n                  min = 2003, max = 2016,\n                  value = 2009, step = 1, sep = \"\",\n                  animate =\n                    animationOptions(interval = 1600, loop = TRUE))\n    ),\n\n    # Show a plot of the indicators evolution\n    mainPanel(\n      tabsetPanel(type = \"tabs\",\n                  tabPanel(\"Gráficos\", \n                           h4(\"Distribuição anual dos indicadores\"),\n                           plotOutput(\"evolPlot\"), \n                           h2(\".\"),\n                           h4(\"Correlação entre os indicadores\"),\n                           plotOutput(\"corrPlot\"),\n                           h2(\".\"),\n                           h4(\"Evolução anual do 'indicador 1' segundo o número de dadores cadáver\"),\n                           plotOutput(\"movPlot\")\n                           ),\n                  tabPanel(\"Tabela\", tableOutput(\"tabela\"), downloadButton(\"downloadData\", \"Download\")),\n                  tabPanel(\"Legenda\", tableOutput(\"legenda\"))\n                  )\n      )\n  ),\n  hr(),\n  print(\"Those informations are based on the Global Observatory on Donation and Transplantation (GODT) data, produced by the WHO-ONT collaboration.\n    \"),\n  hr()\n  \n))\n\n",
+    "created" : 1522061479325.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4248180648",
+    "id" : "CA53DCC6",
+    "lastKnownWriteTime" : 1522319568,
+    "last_content_update" : 1522319568157,
+    "path" : "D:/Trabalhos/CHN/Acesso Tx Renal/open data/appTxPT/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

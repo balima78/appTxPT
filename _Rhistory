@@ -1,0 +1,512 @@
+b1<-ggplot(dados,aes(x=Ano, y=TxDCpmh)) +
+geom_bar(stat = "identity", fill = "red")
+b1
+b1<-ggplot(dados,aes_string(x="Ano")) +
+geom_bar(y = "TxDCpmh", stat = "identity", fill = "red")
+b1
+b1<-ggplot(dados,aes_string(x="Ano", y = "TxDCpmh")) +
+geom_bar(stat = "identity", fill = "red")
+b1
+b1<-ggplot(dados,aes_string(x="Ano", y = "TxDCpmh")) +
+geom_bar(stat = "identity", fill = "red") +
+geom_bar(aes_string (y="TxDVpmh")), stat="identity", position=position_dodge())
+b1<-ggplot(dados,aes_string(x="Ano", y = "TxDCpmh")) +
+geom_bar(stat = "identity") +
+geom_bar(aes_string(y="TxDVpmh")), stat="identity", position=position_dodge())
+b1
+runApp()
+View(dados)
+View(dados)
+dim(dados)
+dadost<-dados %>% gather("valor",2:13)
+library(tidyr)
+dadost<-dados %>% gather("valor",2:13)
+dadost<-gather(dados,"indicador", "valor",2:13)
+dadost
+b1<-ggplot(dados,aes_string(x="Ano", y = "TxDCpmh")) +
+geom_bar(stat = "identity", fill= "indicador", position=position_dodge())
+b1
+b1<-ggplot(dados,aes_string(x="Ano", y = "TxDCpmh")) +
+geom_bar(stat = "identity", fill= indicador, position=position_dodge())
+b1<-ggplot(dadost,aes_string(x="Ano", y = "TxDCpmh")) +
+geom_bar(stat = "identity", fill= indicador, position=position_dodge())
+View(dadost)
+b1<-ggplot(dadost,aes_string(x="Ano", y = "TxDCpmh")) +
+geom_bar(stat = "identity", fill= "indicador", position=position_dodge())
+b1
+b1<-ggplot(dadost,aes_string(x="Ano", y = "valor")) +
+geom_bar(stat = "identity", fill= "indicador", position=position_dodge())
+b1
+b1<-ggplot(dadost,aes_string(x="Ano", y = "valor")) +
+geom_bar(stat = "identity", fill= "indicador", position=position_dodge(), na.rm = T)
+b1
+b1<-ggplot(dadost,aes_string(x="Ano", y = "valor")) +
+geom_bar(stat = "identity", fill= indicador, position=position_dodge(), na.rm = T)
+b1<-ggplot(dadost,aes_string(x="Ano", y = "valor", fill= "indicador")) +
+geom_bar(stat = "identity", position=position_dodge(), na.rm = T)
+b1
+dadost<-filter(dadost, indicador == "TxDCpmh" | indicador == "TxDVpmh")
+b1<-ggplot(dadost,aes_string(x="Ano", y = "valor", fill= "indicador")) +
+geom_bar(stat = "identity", position=position_dodge(), na.rm = T)
+b1
+b1 +
+ylab("") + theme_bw()
+b1 +
+ylab("") + theme_bw() + scale_fill_manual(values=c('#999999','#E69F00'))
+b1 +
+ylab("") + theme_bw() + scale_fill_manual(values=c('#ff0033','#0033ff'))
+b1 +
+ylab("") + theme_bw(legend = "") + scale_fill_manual(values=c('#ff0033','#0033ff'))
+b1 +
+ylab("") + theme_bw(legend.position="none") + scale_fill_manual(values=c('#ff0033','#0033ff'))
+b1 +
+ylab("") + theme_bw() +
+scale_fill_manual(values=c('#ff0033','#0033ff')) +
+guides(fill=FALSE)
+b1
+b1<-ggplot(dadost,aes_string(x="Ano", y = "valor", fill= "indicador", show.legend=F)) +
+geom_bar(stat = "identity", position=position_dodge(), na.rm = T)
+b1 +
+ylab("") + theme_bw() +
+scale_fill_manual(values=c('#ff0033','#0033ff'))
+b1 +
+ylab("") +
+scale_fill_manual(values=c('#ff0033','#0033ff')) +
+theme_bw(legend.position="none")
+b1 +
+ylab("") +
+scale_fill_manual(values=c('#ff0033','#0033ff')) +
+theme(legend.position="none")
+b1 +
+ylab("") +
+scale_fill_manual(values=c('#ff0033','#0033ff')) +
+theme(legend.position="none") + theme_bw()
+b1 +
+ylab("") +
+scale_fill_manual(values=c('#ff0033','#0033ff')) +
+theme_bw() +  theme(legend.position="none")
+b1<-ggplot(dadost,aes_string(x="Ano", y = "valor", fill= "indicador")) +
+geom_bar(stat = "identity", position=position_dodge(), na.rm = T) +
+scale_x_continuous(breaks = 2003:2016)
+b1 +
+ylab("") +
+scale_fill_manual(values=c('#ff0033','#0033ff')) +
+theme_bw() +  theme(legend.position="none")
+runApp()
+runApp()
+runApp()
+runApp()
+l1<-ggplot(dados,aes_string(x="Ano")) +
+geom_line(aes_string(y="TxDCpmh"), colour = "red", size=2) +
+geom_point(aes_string(y="TxDCpmh"), size=2) +
+ylab("") +
+geom_line(aes_string(y="TxDVpmh"), colour = "blue", size=2) +
+geom_point(aes_string(y="TxDVpmh"), size=2) + theme_bw()
+l1
+b1<-ggplot(dadost,aes_string(x="Ano", y = "valor", fill= "indicador")) +
+geom_bar(stat = "identity", position=position_dodge(), na.rm = T) +
+scale_x_continuous(breaks = 2003:2016) +
+ylab("") +
+scale_fill_manual(values=c("TxDVpmh"='#ff0033',"TxDCpmh"='#0033ff')) +
+theme_bw() +  theme(legend.position="none")
+b1
+b1<-ggplot(dadost,aes_string(x="Ano", y = "valor", fill= "indicador")) +
+geom_bar(stat = "identity", position=position_dodge(), na.rm = T) +
+scale_x_continuous(breaks = 2003:2016) +
+ylab("") +
+scale_fill_manual(values=c("TxDCpmh"='#ff0033',"TxDVpmh"='#0033ff')) +
+theme_bw() +  theme(legend.position="none")
+b1
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+b1<-ggplot(dadost,aes_string(x="Ano", y = "valor", fill= "indicador")) +
+geom_bar(stat = "identity", position=position_dodge(), na.rm = T) +
+scale_x_continuous(breaks = 2003:2016) +
+ylab("") +
+scale_fill_manual(values=c("TxDCpmh"='#ff0033',"TxDVpmh"='#0033ff')) +
+theme_bw()
+b1
+b1<-ggplot(dadost,aes_string(x="Ano", y = "valor", fill= "indicador")) +
+geom_bar(stat = "identity", position=position_dodge(), na.rm = T) +
+scale_x_continuous(breaks = 2003:2016) +
+ylab("") +
+scale_fill_manual(values=c("TxDCpmh"= "green","TxDVpmh"="black")) +
+theme_bw()
+b1
+runApp()
+runApp()
+dadost<-filter(dadost, indicador == "TxDCpmh" | indicador == "TxDVpmh")
+l1<-ggplot(dadost) + geom_line(aes_string(x="ano", y="indicador", colour=variable)) +
+scale_colour_manual(values=c("red","green"))
+l1<-ggplot(dadost) + geom_line(aes_string(x="ano", y="indicador")) +
+scale_colour_manual(values=c("red","green"))
+l1
+l1<-ggplot(dadost) + geom_line(aes_string(x="Ano", y="indicador")) +
+scale_colour_manual(values=c("red","green"))
+l1
+dadost<-filter(dadost, indicador == "TxDCpmh" | indicador == "TxDVpmh")
+l1<-ggplot(dadost) + geom_line(aes_string(x="Ano", y="valor", colors="indicador")) +
+scale_colour_manual(values=c("red","green"))
+l1<-ggplot(dadost) + geom_line(aes_string(x="Ano", y="valor", colours=indicador)) +
+scale_colour_manual(values=c("red","green"))
+l1<-ggplot(dadost) + geom_line(aes_string(x="Ano", y="valor", colours="indicador")) +
+scale_colour_manual(values=c("red","green"))
+l1<-ggplot(dadost) + geom_line(aes_string(x="Ano", y="valor", colour="indicador")) +
+scale_colour_manual(values=c("red","green"))
+l1
+l1<-ggplot(dadost) + geom_line(aes_string(x="Ano", y="valor", colour="indicador")) +
+scale_colour_manual(values=c("red","green")) +
+scale_x_continuous(breaks = 2003:2016) +
+ylab("") +
+theme_bw() +  theme(legend.position="none")
+l1
+l1<-ggplot(dadost) + geom_line(aes_string(x="Ano", y="valor", colour="indicador")) +
+scale_colour_manual(values=c("red","green")) +
+scale_x_continuous(breaks = 2003:2016) +
+ylab("") +
+theme_bw()
+l1
+shiny::runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+dados<- dados %>% filter(Ano >= 2003 & Ano <= 2016)
+g2 <- ggplot(dados, aes_string(x="TxDCpmh", y="TxDCpmh")) +
+geom_point()
+g2 + theme_minimal()
+library(ggplot2)
+dados<- dados %>% filter(Ano >= 2003 & Ano <= 2016)
+dados<-read.csv2("NewsTx.csv")
+dados<- dados %>% filter(Ano >= 2003 & Ano <= 2016)
+g2 <- ggplot(dados, aes_string(x="TxDCpmh", y="TxDCpmh")) +
+geom_point()
+g2 + theme_minimal()
+dados<- dados %>% filter(Ano >= 2003 & Ano <= 2016)
+g2 <- ggplot(dados, aes_string(x="TxDCpmh", y="TxDVpmh")) +
+geom_point()
+g2 + theme_minimal()
+g2 <- ggplot(dados, aes_string(x="TxDCpmh", y="TxDVpmh")) +
+geom_point() + stat_smooth(method="lm")
+g2 + theme_minimal()
+stat_smooth
+g2 <- ggplot(dados, aes_string(x="TxDCpmh", y="TxDVpmh")) +
+geom_point() + stat_smooth()
+g2 + theme_minimal()
+g2 <- ggplot(dados, aes_string(x="TxDCpmh", y="TxDVpmh")) +
+geom_point() + stat_smooth(method="rlm")
+g2 + theme_minimal()
+g2 <- ggplot(dados, aes_string(x="TxDCpmh", y="TxDVpmh")) +
+geom_point() + stat_smooth(method="loess")
+g2 + theme_minimal()
+g2 <- ggplot(dados, aes_string(x="TxDCpmh", y="TxDVpmh")) +
+geom_point() + stat_smooth(method="loess", colours = "red")
+g2 + theme_minimal()
+g2 <- ggplot(dados, aes_string(x="TxDCpmh", y="TxDVpmh")) +
+geom_point() + stat_smooth(method="loess", colour = "red")
+g2 + theme_minimal()
+cor(dados[c("TxDCpmh","TxDVpmh")],method="spearman")
+cor(dados[c("TxDCpmh","TxDVpmh")],method="spearman")[1,2]
+runApp()
+runApp()
+dados<- dados %>% filter(Ano >= 2003 & Ano <= 2016) %>% select("TxDCpmh","TxDVpmh")
+dados<- dados %>% filter(Ano >= 2003 & Ano <= 2016) %>% select(TxDCpmh,TxDVpmh)
+cor(dados)
+runApp()
+runApp()
+runApp()
+dados<-read.csv2("NewsTx.csv")
+dados<- dados %>%
+filter(Ano >= 2003 & Ano <= 2016)
+dadosc<- dados %>% filter(Ano >= 2003 & Ano <= 2016) %>% select(TxDCpmh,TxDVpmh)
+cor(dados)
+cor(dadosc)
+runApp()
+runApp()
+runApp()
+dadosc<- dados %>% filter(Ano >= 2003 & Ano <= 2016) %>% select("TxDCpmh","TxDVpmh")
+dadosc<- dados %>% filter(Ano >= 2003 & Ano <= 2016) %>%
+select(paste("TxDCpmh"),paste("TxDVpmh"))
+print("TxDCpmh")
+noquote("TxDCpmh")
+runApp()
+dadosc[["TxDCmh"]]
+dadosc["TxDCmh"]
+dadosc<- dados %>% filter(Ano >= 2003 & Ano <= 2016
+)
+dadosc["TxDCmh"]
+dadosc
+dadosc[TxDCmh]
+dadosc["TxDCpmh"]
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+dados<-read.csv2("NewsTx.csv")
+View(dados)
+dadosc<- dados %>% filter(Ano == 2016)
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDVpmh")) +
+geom_point()
+g2 + theme_minimal()
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDVpmh")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point()
+g2 + theme_minimal()
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDVpmh", size = "DCpmh")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point()
+g2 + theme_minimal()
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDVpmh", size = "DadoresCadaver")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point()
+g2 + theme_minimal()
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDVpmh", size = "DadoresCadaver")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5)
+g2 + theme_minimal()
+dadosc<- dados %>% filter(Ano == 2015)
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDVpmh", size = "DadoresCadaver")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5)
+g2 + theme_minimal()
+dadosc<- dados %>% filter(Ano == 2003)
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDVpmh", size = "DadoresCadaver")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5)
+g2 + theme_minimal()
+dadosc<- dados %>% filter(Ano >= 2003 & Ano <= 2016)
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDVpmh", size = "DadoresCadaver")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5)
+g2 + theme_minimal()
+dadosc<- dados %>% filter(Ano >= 2003 & Ano <= 2016)
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDVpmh")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5, size = DadoresCadaver)
+g2 + theme_minimal()
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDVpmh")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5, size = DadoresCadaver * 2)
+g2 + theme_minimal()
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDVpmh")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5, size = "DadoresCadaver" * 2)
+g2 + theme_minimal()
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDVpmh")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5, size = "DadoresCadaver")
+g2 + theme_minimal()
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDVpmh", size = "DadoresCadaver")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5)
+g2 + theme_minimal()
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDVpmh", size = "DadoresCadaver")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5, colour = "red") +
+g2 + theme_minimal()
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDVpmh", size = "DadoresCadaver")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5, color = "red") +
+g2 + theme_minimal()
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDVpmh", size = "DadoresCadaver")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5) +
+g2 + theme_minimal()
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDVpmh", size = "DadoresCadaver")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5, colour = "red")
+g2 + theme_minimal()
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDCpmh", size = "DadoresCadaver")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5, colour = "red")
+g2 + theme_minimal()
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDCpmh", size = "DadoresCadaver")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5, colour = "red") +
+geom_line(aes_string(x="Ano", y="TxDCpmh"), colour = "blue")
+g2 + theme_minimal()
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDCpmh", size = "DadoresCadaver")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5, colour = "red") +
+g2 + theme_minimal()
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDCpmh", size = "DadoresCadaver")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5, colour = "red") +
+geom_line(colour = "blue")
+g2 + theme_minimal()
+g2 <- ggplot(dadosc, aes_string(x="Ano", y="TxDCpmh", size = "DadoresCadaver")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5, colour = "red") +
+geom_line(dadosc, aes_string(x="Ano", y="TxDCpmh"),colour = "blue")
+g2 + theme_minimal()
+dadosc<- dados %>% filter(Ano >= 2003 & Ano <= 2016)
+dados1<- dados %>% filter(Ano == 2009)
+g2 <- ggplot(dados1, aes_string(x="Ano", y="TxDCpmh", size = "DadoresCadaver")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5, colour = "red") +
+geom_line(dadosc, aes_string(x="Ano", y="TxDCpmh"),colour = "blue")
+g2 + theme_minimal()
+g2 <- ggplot(dados1, aes_string(x="Ano", y="TxDCpmh", size = "DadoresCadaver")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5, colour = "red")
+g2 + theme_minimal()
+g3<-ggplot(dadosc, aes_string(x="Ano", y="TxDCpmh")) +
+geom_line(colour = "blue")
+g3 + theme_minimal()
+g3 + theme_minimal() + g2
+g3<-ggplot(dadosc, aes_string(x="Ano", y="TxDCpmh")) +
+geom_line(colour = "blue") +
+geom_point(aes(size = "DadoresCadaver"), alpha = 0.5)
+g3 + theme_minimal()
+g3<-ggplot(dadosc, aes_string(x="Ano", y="TxDCpmh")) +
+geom_line(colour = "blue") +
+geom_point(aes_string(size = "DadoresCadaver"), alpha = 0.5)
+g3 + theme_minimal()
+g3<-ggplot(dadosc, aes_string(x="Ano", y="TxDCpmh")) +
+geom_line(colour = "blue") +
+geom_point(aes(size = DadoresCadaver), alpha = 0.5)
+g3 + theme_minimal()
+g2 <- ggplot(dados1, aes_string(x="Ano", y="TxDCpmh", size = "DadoresCadaver")) +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(alpha = 0.5, colour = "red")
+g2 + theme_minimal()
+g3<-ggplot(dadosc, aes_string(x="Ano", y="TxDCpmh")) +
+geom_line(colour = "blue") +
+geom_point(aes(size = DadoresCadaver), alpha = 0.5)
+g3 + theme_minimal()
+g3<-ggplot(dadosc, aes_string(x="Ano", y="TxDCpmh")) +
+geom_line(colour = "blue") +
+geom_point(aes(size = DadoresCadaver * 2), alpha = 0.5)
+g3 + theme_minimal()
+shiny::runApp()
+runApp()
+g3<-ggplot(dadosc, aes_string(x="Ano", y="TxDCpmh")) +
+geom_line(colour = "blue") +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(aes(size = DadoresCadaver), alpha = 0.5)
+g3 + theme_minimal()
+dados1<- dados %>% filter(Ano == 2009)
+g3<-ggplot(dados1, aes_string(x="Ano", y="TxDCpmh")) +
+geom_line(colour = "blue") +
+scale_x_continuous(breaks = 2003:2016) +
+geom_point(aes(size = DadoresCadaver), alpha = 0.5)
+g3 + theme_minimal()
+g3<-ggplot(dados1, aes_string(x="Ano", y="TxDCpmh")) +
+geom_line(colour = "blue") +
+scale_x_discrete(labels = 2003:2016) +
+geom_point(aes(size = DadoresCadaver), alpha = 0.5)
+g3 + theme_minimal()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+g1<-ggplot(dados,aes_string(x="Ano")) +
+geom_line(aes_string(y=input$y1), colour = "red", size=2) +
+geom_point(aes_string(y=input$y1), size=2) +
+scale_x_continuous(breaks = input$ano[1]:input$ano[2]) +
+ylab("") +
+geom_line(aes_string(y=input$y2), colour = "blue", size=2) +
+geom_point(aes_string(y=input$y2), size=2) + theme_bw()
+g3<-ggplot(dados1, aes_string(x="Ano", y="TxDCpmh")) +
+geom_line(colour = "blue") +
+scale_x_continuous(labels = 2003:2016) +
+geom_point(aes(size = DadoresCadaver), alpha = 0.5)
+g3 + theme_minimal()
+g3<-ggplot(dados1, aes_string(x="Ano", y="TxDCpmh")) +
+geom_line(colour = "blue") +
+scale_x_continuous(breaks = 2003:2016, limits = c(2003,2016)) +
+geom_point(aes(size = DadoresCadaver), alpha = 0.5)
+g3 + theme_minimal()
+g3<-ggplot(dados1, aes_string(x="Ano")) +
+geom_line(colour = "blue") +
+scale_x_continuous(breaks = 2003:2016, limits = c(2003,2016)) +
+geom_point(aes_string(y="TxDCpmh", size = "DadoresCadaver"), alpha = 0.5)
+g3 + theme_minimal()
+g3<-ggplot(dados1, aes_string(x="Ano")) +
+geom_point(aes_string(y="TxDCpmh", size = "DadoresCadaver"), alpha = 0.5) +
+scale_x_continuous(breaks = 2003:2016, limits = c(2003,2016)) +
+geom_line(colour = "blue") +
+g3 + theme_minimal()
+g3<-ggplot(dados1, aes_string(x="Ano")) +
+geom_point(aes_string(y="TxDCpmh", size = "DadoresCadaver"), alpha = 0.5) +
+scale_x_continuous(breaks = 2003:2016, limits = c(2003,2016)) +
+geom_line(colour = "blue")
+g3 + theme_minimal()
+g3<-ggplot(dados1, aes_string(x="Ano")) +
+geom_point(aes_string(y="TxDCpmh", size = "DadoresCadaver"), alpha = 0.5) +
+scale_x_continuous(breaks = 2003:2016, limits = c(2003,2016)) +
+geom_line(aes_string(y="TxDCpmh"), colour = "blue")
+g3 + theme_minimal()
+g3<-ggplot(dados, aes_string(x="Ano")) +
+geom_point(aes_string(y="TxDCpmh", size = "DadoresCadaver"), alpha = 0.5) +
+scale_x_continuous(breaks = 2003:2016, limits = c(2003,2016)) +
+geom_line(aes_string(y="TxDCpmh"), colour = "blue")
+g3 + theme_minimal()
+g3<-ggplot(dados, aes_string(x="Ano")) +
+geom_point(aes_string(y="TxDCpmh", size = "DadoresCadaver"), alpha = 0.5) +
+scale_x_continuous(breaks = 2003:2016, limits = c(2003,2016)) +
+geom_line(aes_string(y="TxDCpmh"), colour = "blue") +
+geom_point(aes_string(y="TxDVpmh", size = "DadoresCadaver"), alpha = 0.5)
+g3 + theme_minimal()
+runApp()
+runApp()
+runApp()
+runApp()
+g3<-ggplot(dados, aes_string(x="Ano")) +
+geom_point(aes_string(y="TxDCpmh", size = "DadoresCadaver"), alpha = 0.5) +
+scale_x_continuous(breaks = 2003:2016, limits = c(2003,2016)) +
+geom_line(aes_string(y="TxDCpmh"), colour = "blue") +
+geom_point(aes_string(y="TxDVpmh", size = "DadoresCadaver"), alpha = 0.5) +
+geom_line(aes_string(y="TxDVpmh"), colour = "red") +
+g3 + theme_minimal()
+g3<-ggplot(dados, aes_string(x="Ano")) +
+geom_point(aes_string(y="TxDCpmh", size = "DadoresCadaver"), alpha = 0.5) +
+scale_x_continuous(breaks = 2003:2016, limits = c(2003,2016)) +
+geom_line(aes_string(y="TxDCpmh"), colour = "blue") +
+geom_point(aes_string(y="TxDVpmh", size = "DadoresCadaver"), alpha = 0.5) +
+geom_line(aes_string(y="TxDVpmh"), colour = "red")
+g3 + theme_minimal()
+wk()
+runApp()

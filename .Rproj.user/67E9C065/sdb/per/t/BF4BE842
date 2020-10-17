@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "install.packages('rsconnect')\n\nrsconnect::setAccountInfo(name='bioestatisticas',\n                          token='7ABE1E14AF786A7227F6F95837E44861',\n                          secret='4DGi2kzm/a5i6ww9XiruPwzkNk0FVjTWNaPfV2Jm')\n\nlibrary(rsconnect)\nrsconnect::deployApp(\"D:/CHN/OpenData/appTxPT\")\n\n\n\n",
+    "created" : 1522092850404.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2434053877",
+    "id" : "BF4BE842",
+    "lastKnownWriteTime" : 1523470718,
+    "last_content_update" : 1523470718916,
+    "path" : "D:/CHN/OpenData/appTxPT/update.R",
+    "project_path" : "update.R",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
