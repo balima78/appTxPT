@@ -7,14 +7,14 @@ install.packages("shinythemes")
 
 install.packages('rsconnect')
 
-removeAccount("bruno-lima")
+rsconnect::removeAccount("balima")
 
 rsconnect::setAccountInfo(name='bioestatisticas',
                           token='7ABE1E14AF786A7227F6F95837E44861',
                           secret='4DGi2kzm/a5i6ww9XiruPwzkNk0FVjTWNaPfV2Jm')
 
 library(rsconnect)
-rsconnect::deployApp("D:/CHN/OpenData/appTxPT")
+rsconnect::deployApp("C:/Users/balim/Documents/4.APPs/appTxPT")
 
 
 

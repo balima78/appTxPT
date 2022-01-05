@@ -15,13 +15,13 @@ shinyUI(
   fluidPage(
     # nome no browser
   headerPanel(title ="",
-          windowTitle = "RAT | Oficina de BioEstatistica"), 
+          windowTitle = "TxOR | Oficina de BioEstatistica"), 
     
   # Título da página com imagem OB
   titlePanel(a(href="http://bioestatisticas.wixsite.com/bioestatisticas", target="_blank",
                img(src='ob.jpg', align = "right",height=60,width=150))),
-  a(href="http://bioestatisticas.wixsite.com/bioestatisticas/rat", target="_blank",
-    h1("Registo Aberto de Transplantes (RAT)")),
+  a(href="https://txor.netlify.app/", target="_blank",
+    h1("Transplants' Open Registry (TxOR)")),
   
   tags$head(includeScript("gtagTxPT.js")),
   
@@ -30,7 +30,7 @@ shinyUI(
   tagList(
 #  shinythemes::themeSelector(),
     navbarPage(theme = shinytheme("cerulean"),
-               title=div(img(src="openDoor1.jpg"), "RAT"), 
+               title=div(img(src="openDoor1.jpg"), "TxOR"), 
                tabPanel("Tx Renal", icon = icon("heartbeat"),
                         h3("Transplante Renal"),
                         p("Os resultados aqui apresentados foram publicados em:"),
