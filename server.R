@@ -123,7 +123,7 @@ shinyServer(function(input, output, session) {
     
     g3<-ggplot(dadosm, aes_string(x="Ano", y=input$y1)) +
       geom_line(colour = "blue", size = 1.3) +
-      scale_x_continuous(breaks = 2003:2019, limits = c(2003,2019)) +
+      scale_x_continuous(breaks = 2003:2020, limits = c(2003,2020)) +
       scale_y_continuous(limits = c(min(dados[input$y1]*0.1, na.rm = T), 
                                     max(dados[input$y1]*1.1, na.rm = T))) +
       scale_size_continuous(limits=c(150,350),
