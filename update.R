@@ -14,7 +14,7 @@ rsconnect::setAccountInfo(name='bioestatisticas',
                           secret='4DGi2kzm/a5i6ww9XiruPwzkNk0FVjTWNaPfV2Jm')
 
 library(rsconnect)
-rsconnect::deployApp("C:/Users/balim/Documents/4.APPs/appTxPT")
+rsconnect::deployApp(getwd())
 
 
 
