@@ -44,8 +44,8 @@ shinyUI(
                         wellPanel(
                           # Escolher o intervalo de anos
                           sliderInput("ano", "Seleccione intervalo:",
-                                      min = 2003, max = 2020, step = 1, sep = "",
-                                      value = c(2003,2020)),
+                                      min = 2003, max = 2021, step = 1, sep = "",
+                                      value = c(2003,2021)),
                           radioButtons('tipo', 'Seleccione tipo de gráfico:', 
                                        c('linhas', 'barras'),
                                        inline = TRUE)),
@@ -87,7 +87,7 @@ shinyUI(
                           # escolher ano ou fazer play
                           h5("Escolha o ano ou faça 'play':"),
                           sliderInput("num", "",
-                                      min = 2003, max = 2020,
+                                      min = 2003, max = 2021,
                                       value = 2009, step = 1, sep = "",
                                       animate = animationOptions(interval = 1600, loop = TRUE))
                           )),
@@ -96,8 +96,8 @@ shinyUI(
                           wellPanel(
                             # Escolher o intervalo de anos
                             sliderInput("anos", "Seleccione intervalo:",
-                                        min = 2003, max = 2020, step = 1, sep = "",
-                                        value = c(2003,2020))
+                                        min = 2003, max = 2021, step = 1, sep = "",
+                                        value = c(2003,2021))
                           )),
                         conditionalPanel(
                           'input.rim === "Legenda"',

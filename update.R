@@ -14,7 +14,7 @@ rsconnect::setAccountInfo(name='bioestatisticas',
                           secret='4DGi2kzm/a5i6ww9XiruPwzkNk0FVjTWNaPfV2Jm')
 
 library(rsconnect)
-rsconnect::deployApp(getwd())
+rsconnect::deployApp(getwd(), account = 'bioestatisticas')
 
 
 
