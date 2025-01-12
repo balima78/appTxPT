@@ -5,7 +5,5 @@ account: bioestatisticas
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 308954
-bundleId: 7692659
+bundleId: 9638545
 url: https://bioestatisticas.shinyapps.io/apptxpt/
-when: 1694882836.75432
-lastSyncTime: 1694882836.75432
